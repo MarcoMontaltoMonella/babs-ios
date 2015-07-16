@@ -80,8 +80,6 @@
 				A97C02181B57F6D300909417 /* AppDelegate.swift */,
 				A97C021A1B57F6D300909417 /* ViewController.swift */,
 				A97C021C1B57F6D300909417 /* Main.storyboard */,
-				A97C021F1B57F6D300909417 /* Images.xcassets */,
-				A97C02211B57F6D300909417 /* LaunchScreen.xib */,
 				A97C02161B57F6D300909417 /* Supporting Files */,
 			);
 			path = babs;
@@ -90,6 +88,8 @@
 		A97C02161B57F6D300909417 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A97C02211B57F6D300909417 /* LaunchScreen.xib */,
+				A97C021F1B57F6D300909417 /* Images.xcassets */,
 				A97C02171B57F6D300909417 /* Info.plist */,
 			);
 			name = "Supporting Files";
