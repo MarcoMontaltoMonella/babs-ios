@@ -8,29 +8,60 @@
 
 import UIKit
 
+//TESTING ViewController
+
 class ViewController: UIViewController, UITableViewDataSource {
 
+    //Testing struct
+    struct FixedLengthRange: Printable {
+        var firstValue: Int
+        let length: Int
+        var description: String {
+            var result = ""
+            for i in Range(start: firstValue,end: (firstValue+length)){
+                result += String(i) + ","
+            }
+            result += String(firstValue+length) + "."
+            return result
+        }
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+//        var rangeToBePrinted = FixedLengthRange(firstValue: 5, length: 6)
+//        println("First \(rangeToBePrinted)")
+//        rangeToBePrinted.firstValue = 1
+//        println("Second \(rangeToBePrinted)")
+        
     }
 
     //return how many rows in my table
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 10
     }
     
-    //return how many sections in my table
+    //return how many sections in my table. Default: 1 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
+    
+    var i = 0
     //contents of each cell. Called for every cell
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell()
-        cell.textLabel?.text = "Orange!"
+        
+        let data = "Orange \(++i)"
+        let dequeued: AnyObject = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath)
+        let cell = dequeued as! UITableViewCell
+        cell.textLabel?.text = data
+        cell.detailTextLabel?.text = "Subtitle"
+        
         return cell
     }
+    
+
 
 }
 

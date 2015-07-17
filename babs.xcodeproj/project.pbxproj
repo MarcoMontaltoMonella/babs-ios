@@ -13,6 +13,9 @@
 		A97C02201B57F6D300909417 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97C021F1B57F6D300909417 /* Images.xcassets */; };
 		A97C02231B57F6D300909417 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A97C02211B57F6D300909417 /* LaunchScreen.xib */; };
 		A97C022F1B57F6D300909417 /* babsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97C022E1B57F6D300909417 /* babsTests.swift */; };
+		A97C023D1B58631400909417 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97C023C1B58631400909417 /* MapKit.framework */; };
+		A97C023F1B59B09A00909417 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97C023E1B59B09A00909417 /* MapViewController.swift */; };
+		A97C02411B59B56700909417 /* StationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97C02401B59B56700909417 /* StationsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		A97C02281B57F6D300909417 /* babsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = babsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97C022D1B57F6D300909417 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A97C022E1B57F6D300909417 /* babsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = babsTests.swift; sourceTree = "<group>"; };
+		A97C023C1B58631400909417 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A97C023E1B59B09A00909417 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A97C02401B59B56700909417 /* StationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A97C023D1B58631400909417 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +66,7 @@
 		A97C020A1B57F6D300909417 = {
 			isa = PBXGroup;
 			children = (
+				A97C023C1B58631400909417 /* MapKit.framework */,
 				A97C02151B57F6D300909417 /* babs */,
 				A97C022B1B57F6D300909417 /* babsTests */,
 				A97C02141B57F6D300909417 /* Products */,
@@ -77,8 +85,9 @@
 		A97C02151B57F6D300909417 /* babs */ = {
 			isa = PBXGroup;
 			children = (
-				A97C02181B57F6D300909417 /* AppDelegate.swift */,
 				A97C021A1B57F6D300909417 /* ViewController.swift */,
+				A97C023E1B59B09A00909417 /* MapViewController.swift */,
+				A97C02401B59B56700909417 /* StationsTableViewController.swift */,
 				A97C021C1B57F6D300909417 /* Main.storyboard */,
 				A97C02161B57F6D300909417 /* Supporting Files */,
 			);
@@ -88,6 +97,7 @@
 		A97C02161B57F6D300909417 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A97C02181B57F6D300909417 /* AppDelegate.swift */,
 				A97C02211B57F6D300909417 /* LaunchScreen.xib */,
 				A97C021F1B57F6D300909417 /* Images.xcassets */,
 				A97C02171B57F6D300909417 /* Info.plist */,
@@ -161,6 +171,11 @@
 				TargetAttributes = {
 					A97C02121B57F6D300909417 = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A97C02271B57F6D300909417 = {
 						CreatedOnToolsVersion = 6.4;
@@ -212,7 +227,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A97C02411B59B56700909417 /* StationsTableViewController.swift in Sources */,
 				A97C021B1B57F6D300909417 /* ViewController.swift in Sources */,
+				A97C023F1B59B09A00909417 /* MapViewController.swift in Sources */,
 				A97C02191B57F6D300909417 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +428,7 @@
 				A97C02341B57F6D300909417 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A97C02351B57F6D300909417 /* Build configuration list for PBXNativeTarget "babsTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +437,7 @@
 				A97C02371B57F6D300909417 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
