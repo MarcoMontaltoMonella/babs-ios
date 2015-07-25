@@ -82,7 +82,7 @@ class StationsTableViewController: UITableViewController {
     
     
     private struct Storyboard {
-        static let CellReuseIdentifier = "Station"
+        static let CellReuseIdentifier = "StationCell"
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -90,8 +90,8 @@ class StationsTableViewController: UITableViewController {
 
         // Configure the cell...
         
-        cell.textLabel!.text = tmpStationsArray[indexPath.row].name
-        cell.detailTextLabel!.text = String("\(tmpStationsArray[indexPath.row].dockcount!)")
+        cell.textLabel!.text = tmpStationsArray[indexPath.row].description
+        cell.detailTextLabel!.text = String("\(tmpStationsArray[indexPath.row].id!)")
         /*
         let stations: [Station] = stations?.stationsForTableView(self)
         let station = stations[indexPath.section]
@@ -99,8 +99,21 @@ class StationsTableViewController: UITableViewController {
         cell.detailTextLabel!.text = "\(station.dockcount)"
         */
         
-        
         return cell
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let mapvc = segue.destinationViewController as? MapViewController {
+            if let sender = sender as? UITableViewCell {
+                if let identifier = segue.identifier {
+                    if let selectedID = sender.detailTextLabel?.text?.toInt(){ //FIXME doesn't get in!
+                        //get ID coordinates
+                        
+                    }
+                }
+            }
+        }
     }
     
 

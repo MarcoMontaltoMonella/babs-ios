@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Station {
+class Station: Printable {
     
     var id: Int?
     var name: String?
@@ -27,5 +27,8 @@ class Station {
         self.installation = installation
     }
     
+    var description: String {
+        return self.name!
+    }
     
 }

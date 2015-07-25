@@ -96,7 +96,6 @@
 				A97C023E1B59B09A00909417 /* MapViewController.swift */,
 				A97C02401B59B56700909417 /* StationsTableViewController.swift */,
 				A97C021C1B57F6D300909417 /* Main.storyboard */,
-				A97C021A1B57F6D300909417 /* ViewController.swift */,
 				A9888FC21B5BADCF00196BCC /* Station.swift */,
 				A97C02161B57F6D300909417 /* Supporting Files */,
 			);
@@ -106,6 +105,7 @@
 		A97C02161B57F6D300909417 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A97C021A1B57F6D300909417 /* ViewController.swift */,
 				A97C02181B57F6D300909417 /* AppDelegate.swift */,
 				A97C02211B57F6D300909417 /* LaunchScreen.xib */,
 				A97C021F1B57F6D300909417 /* Images.xcassets */,
