@@ -20,11 +20,31 @@ class StationsTableViewController: UITableViewController {
     
     weak var stations: StationTableViewDataSource?
     
+    // TEMPORARY DATA ARRAY
+    var tmpStationsArray: [Station] = []
 
     // MARK: - View Controller Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+
+        //***************** TEMPORARY DATA START *********************
+        
+        let st1 = Station(id: 2, name: "San Jose Diridon Caltrain Station", latitude: 37.329732, longitude: -121.901782, dockcount: 27, landmark: "San Jose", installation: "2013-08-06")
+        let st2 = Station(id: 3, name: "San Jose", latitude: 37.330698, longitude: -121.888979, dockcount: 15, landmark: "San Jose", installation: "2013-08-05")
+        let st3 = Station(id: 4, name: "Santa Clara at Almaden", latitude: 37.333988, longitude: -121.894902, dockcount: 11, landmark: "San Jose", installation: "2013-08-06")
+        let st4 = Station(id: 5, name: "Adobe on Almaden", latitude: 37.331415, longitude: -121.8932, dockcount: 19, landmark: "San Jose", installation: "2013-08-05")
+        
+        //equivalent
+        //tmpStationsArray.append(st1)
+        
+        tmpStationsArray += [st1,st2,st3,st4]
+        
+        //***************** TEMPORARY DATA END *********************
+        
+        
         
         
         //2. request station lists
@@ -57,20 +77,12 @@ class StationsTableViewController: UITableViewController {
         // Return the number of rows in the section.
         
         //return stations[section].count
-        return 10
+        return tmpStationsArray.count
     }
+    
     
     private struct Storyboard {
         static let CellReuseIdentifier = "Station"
-    }
-    
-    var i = 0 {
-        willSet{
-            println("The new value is \(newValue)")
-        }
-        didSet{
-            println("The old value was \(oldValue)")
-        }
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -78,7 +90,8 @@ class StationsTableViewController: UITableViewController {
 
         // Configure the cell...
         
-        cell.textLabel?.text = "Number \(i++)"
+        cell.textLabel!.text = tmpStationsArray[indexPath.row].name
+        cell.detailTextLabel!.text = String("\(tmpStationsArray[indexPath.row].dockcount!)")
         /*
         let stations: [Station] = stations?.stationsForTableView(self)
         let station = stations[indexPath.section]

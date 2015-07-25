@@ -10,13 +10,15 @@ import Foundation
 
 class Station {
     
+    var id: Int?
     var name: String?
     var latitude,longitude: Double?
     var dockcount: Int?
     var landmark: String?
     var installation: String? //change it to NSDate later on...
     
-    init(name: String, latitude: Double, longitude: Double, dockcount: Int, landmark: String, installation: String){
+    init(id: Int, name: String, latitude: Double, longitude: Double, dockcount: Int, landmark: String, installation: String){
+        self.id = id
         self.name = name
         self.latitude = latitude
         self.longitude = longitude
