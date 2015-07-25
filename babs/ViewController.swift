@@ -8,7 +8,7 @@
 
 import UIKit
 
-//TESTING ViewController
+//TESTING ViewController NOT USED!
 
 class ViewController: UIViewController, UITableViewDataSource {
 
@@ -48,11 +48,10 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     
-    var i = 0
     //contents of each cell. Called for every cell
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let data = "Orange \(++i)"
+        let data = "Orange"
         let dequeued: AnyObject = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath)
         let cell = dequeued as! UITableViewCell
         cell.textLabel?.text = data
@@ -60,7 +59,6 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
-    
 
 
 }

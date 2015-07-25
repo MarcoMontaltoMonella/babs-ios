@@ -8,18 +8,29 @@
 
 import UIKit
 
+//adding class, we are saying that this protocol could only be implemented by classes (and so we can use weak on stations).
+protocol StationTableViewDataSource: class {
+    func stationsForTableView(sender: StationsTableViewController) -> [Station]
+}
+
 class StationsTableViewController: UITableViewController {
     
     //1. var stations = empty bike stations 🚲 stations[stationsObj]
+    //using weak the controller could go out of memory once its job is done! Often used in delegation
+    
+    weak var stations: StationTableViewDataSource?
+    
 
     // MARK: - View Controller Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         //2. request station lists
         //2.5 dispatch_async(dispatch_get_main_queue())
         //3. add to the list and tableView.reloadData()
+        
         
 
         // Uncomment the following line to preserve selection between presentations
@@ -41,29 +52,41 @@ class StationsTableViewController: UITableViewController {
     }
 
     
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         
         //return stations[section].count
-        return 0
+        return 10
     }
     
     private struct Storyboard {
         static let CellReuseIdentifier = "Station"
     }
     
+    var i = 0 {
+        willSet{
+            println("The new value is \(newValue)")
+        }
+        didSet{
+            println("The old value was \(oldValue)")
+        }
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as! UITableViewCell
 
         // Configure the cell...
+        
+        cell.textLabel?.text = "Number \(i++)"
         /*
+        let stations: [Station] = stations?.stationsForTableView(self)
         let station = stations[indexPath.section]
-        cell.textLabel?.text = station.text
-        cell.detailTextLabel?.text = station.dockcount
+        cell.textLabel!.text = station.name
+        cell.detailTextLabel!.text = "\(station.dockcount)"
         */
-
+        
+        
         return cell
     }
     

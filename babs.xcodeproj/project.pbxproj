@@ -16,6 +16,9 @@
 		A97C023D1B58631400909417 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97C023C1B58631400909417 /* MapKit.framework */; };
 		A97C023F1B59B09A00909417 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97C023E1B59B09A00909417 /* MapViewController.swift */; };
 		A97C02411B59B56700909417 /* StationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97C02401B59B56700909417 /* StationsTableViewController.swift */; };
+		A9888FC11B5BA4BB00196BCC /* BabsDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9888FC01B5BA4BB00196BCC /* BabsDAO.swift */; };
+		A9888FC31B5BADCF00196BCC /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9888FC21B5BADCF00196BCC /* Station.swift */; };
+		A9888FC51B5EEBDB00196BCC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9888FC41B5EEBDB00196BCC /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		A97C023C1B58631400909417 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A97C023E1B59B09A00909417 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A97C02401B59B56700909417 /* StationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsTableViewController.swift; sourceTree = "<group>"; };
+		A9888FC01B5BA4BB00196BCC /* BabsDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BabsDAO.swift; sourceTree = "<group>"; };
+		A9888FC21B5BADCF00196BCC /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		A9888FC41B5EEBDB00196BCC /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +91,13 @@
 		A97C02151B57F6D300909417 /* babs */ = {
 			isa = PBXGroup;
 			children = (
-				A97C021A1B57F6D300909417 /* ViewController.swift */,
+				A9888FC41B5EEBDB00196BCC /* SwiftyJSON.swift */,
+				A9888FC01B5BA4BB00196BCC /* BabsDAO.swift */,
 				A97C023E1B59B09A00909417 /* MapViewController.swift */,
 				A97C02401B59B56700909417 /* StationsTableViewController.swift */,
 				A97C021C1B57F6D300909417 /* Main.storyboard */,
+				A97C021A1B57F6D300909417 /* ViewController.swift */,
+				A9888FC21B5BADCF00196BCC /* Station.swift */,
 				A97C02161B57F6D300909417 /* Supporting Files */,
 			);
 			path = babs;
@@ -230,6 +239,9 @@
 				A97C02411B59B56700909417 /* StationsTableViewController.swift in Sources */,
 				A97C021B1B57F6D300909417 /* ViewController.swift in Sources */,
 				A97C023F1B59B09A00909417 /* MapViewController.swift in Sources */,
+				A9888FC11B5BA4BB00196BCC /* BabsDAO.swift in Sources */,
+				A9888FC31B5BADCF00196BCC /* Station.swift in Sources */,
+				A9888FC51B5EEBDB00196BCC /* SwiftyJSON.swift in Sources */,
 				A97C02191B57F6D300909417 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
