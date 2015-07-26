@@ -83,6 +83,7 @@ class StationsTableViewController: UITableViewController {
     
     private struct Storyboard {
         static let CellReuseIdentifier = "StationCell"
+        static let GeneralCell = "generalCellSegue"
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -102,15 +103,22 @@ class StationsTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        println("Inside peformSegue")
+        performSegueWithIdentifier(Storyboard.GeneralCell, sender: UITableViewCell.self)
+    }
+    
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        println("Inside prepareForSegue")
         if let mapvc = segue.destinationViewController as? MapViewController {
-            if let sender = sender as? UITableViewCell {
-                if let identifier = segue.identifier {
-                    if let selectedID = sender.detailTextLabel?.text?.toInt(){ //FIXME doesn't get in!
-                        //get ID coordinates
-                        
-                    }
+            if segue.identifier == Storyboard.GeneralCell {
+                if let selectedID = tableView.indexPathForSelectedRow()?.row { //FIXME doesn't get in!
+                    //get ID coordinates
+                    let selectedStation = tmpStationsArray[selectedID]
+                    mapvc.title = selectedStation.name!
+                    mapvc.pinPoint(longitude: selectedStation.longitude!, latitude: selectedStation.latitude!, title: selectedStation.name!, subtitle: "\(selectedStation.dockcount!) 🚴")
                 }
             }
         }

@@ -11,16 +11,51 @@ import MapKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
+    var mapView: MKMapView!
+    var pinLocation: CLLocationCoordinate2D!
+    var pinTitle: String!
+    var pinSubtitle: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("Hello!")
-        // Do any additional setup after loading the view.
+        mapView.mapType = .Standard
+        mapView.frame = view.frame
+        mapView.delegate = self
+        view.addSubview(mapView)
+        
+//        println("MapViewController loaded!")
+    }
+    
+    required init(coder aDecorer: NSCoder){
+        super.init(coder: aDecorer)
+        mapView = MKMapView()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        addPinToMapView()
     }
+    
+    func pinPoint(#longitude: Double, latitude: Double, title: String, subtitle: String) {
+        pinLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        pinTitle = title
+        pinSubtitle = subtitle
+    }
+    
+    /* We have a pin on the map; now zoom into it and make that pin the center of the map */
+    func setCenterOfMapToLocation(location: CLLocationCoordinate2D){
+        let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let region = MKCoordinateRegion(center: location, span: span)
+        mapView.setRegion(region, animated: true)
+    }
+    
+    func addPinToMapView(){
+        /* Create the annotation using the location */
+        let annotation = PinAnnotation(coordinate: pinLocation, title: pinTitle, subtitle: pinSubtitle)
+        mapView.addAnnotation(annotation)
+        setCenterOfMapToLocation(pinLocation)
+    }
+    
 
     /*
     // MARK: - Navigation
@@ -33,3 +68,5 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     */
 
 }
+
+

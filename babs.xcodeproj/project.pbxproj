@@ -19,6 +19,7 @@
 		A9888FC11B5BA4BB00196BCC /* BabsDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9888FC01B5BA4BB00196BCC /* BabsDAO.swift */; };
 		A9888FC31B5BADCF00196BCC /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9888FC21B5BADCF00196BCC /* Station.swift */; };
 		A9888FC51B5EEBDB00196BCC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9888FC41B5EEBDB00196BCC /* SwiftyJSON.swift */; };
+		A9888FC91B65033C00196BCC /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9888FC81B65033C00196BCC /* PinAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		A9888FC01B5BA4BB00196BCC /* BabsDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BabsDAO.swift; sourceTree = "<group>"; };
 		A9888FC21B5BADCF00196BCC /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		A9888FC41B5EEBDB00196BCC /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		A9888FC81B65033C00196BCC /* PinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				A97C02401B59B56700909417 /* StationsTableViewController.swift */,
 				A97C021C1B57F6D300909417 /* Main.storyboard */,
 				A9888FC21B5BADCF00196BCC /* Station.swift */,
+				A9888FC81B65033C00196BCC /* PinAnnotation.swift */,
 				A97C02161B57F6D300909417 /* Supporting Files */,
 			);
 			path = babs;
@@ -236,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9888FC91B65033C00196BCC /* PinAnnotation.swift in Sources */,
 				A97C02411B59B56700909417 /* StationsTableViewController.swift in Sources */,
 				A97C021B1B57F6D300909417 /* ViewController.swift in Sources */,
 				A97C023F1B59B09A00909417 /* MapViewController.swift in Sources */,

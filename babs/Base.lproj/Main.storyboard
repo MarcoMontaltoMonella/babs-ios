@@ -32,9 +32,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="QnA-ZK-BE7" kind="show" id="w3b-bi-Kdp"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -66,12 +63,15 @@
                             </fragment>
                         </attributedString>
                     </refreshControl>
+                    <connections>
+                        <segue destination="QnA-ZK-BE7" kind="show" identifier="generalCellSegue" id="vgw-Jn-To6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ugK-nq-rXo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1802" y="-397"/>
         </scene>
-        <!--Map-->
+        <!--Map View Controller-->
         <scene sceneID="h63-LF-NfG">
             <objects>
                 <viewController id="QnA-ZK-BE7" customClass="MapViewController" customModule="babs" customModuleProvider="target" sceneMemberID="viewController">
@@ -95,7 +95,6 @@
                             <constraint firstItem="gDx-7Y-NDD" firstAttribute="top" secondItem="l6Y-mS-63d" secondAttribute="top" id="Yr1-lq-Jbv"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Map" id="puy-hx-lhd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kmc-e5-mW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -123,7 +122,7 @@
         <scene sceneID="t0p-O3-SOQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CS5-gC-SJy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Stations" id="3sF-KT-qy7"/>
+                    <tabBarItem key="tabBarItem" title="Stations" image="BikeStationIcon-Small" id="3sF-KT-qy7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="K9x-91-NhX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -139,4 +138,7 @@
             <point key="canvasLocation" x="1104" y="-397"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BikeStationIcon-Small" width="29" height="29"/>
+    </resources>
 </document>
