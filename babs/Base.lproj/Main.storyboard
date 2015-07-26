@@ -40,29 +40,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Stations" id="M1y-bG-knE"/>
-                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="anb-ZP-yaI">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <attributedString key="attributedTitle">
-                            <fragment content="🚴">
-                                <attributes>
-                                    <font key="NSFont" size="11" name="AppleColorEmoji"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                </attributes>
-                            </fragment>
-                            <fragment content="...">
-                                <attributes>
-                                    <font key="NSFont" size="11" name="Monaco"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                </attributes>
-                            </fragment>
-                            <fragment content="🚴">
-                                <attributes>
-                                    <font key="NSFont" size="11" name="AppleColorEmoji"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
-                    </refreshControl>
                     <connections>
                         <segue destination="QnA-ZK-BE7" kind="show" identifier="generalCellSegue" id="vgw-Jn-To6"/>
                     </connections>

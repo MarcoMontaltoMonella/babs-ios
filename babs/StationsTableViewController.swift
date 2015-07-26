@@ -9,16 +9,18 @@
 import UIKit
 
 //adding class, we are saying that this protocol could only be implemented by classes (and so we can use weak on stations).
+/*
 protocol StationTableViewDataSource: class {
     func stationsForTableView(sender: StationsTableViewController) -> [Station]
 }
+*/
 
 class StationsTableViewController: UITableViewController {
     
     //1. var stations = empty bike stations 🚲 stations[stationsObj]
     //using weak the controller could go out of memory once its job is done! Often used in delegation
     
-    weak var stations: StationTableViewDataSource?
+    //weak var stations: StationTableViewDataSource?
     
     // TEMPORARY DATA ARRAY
     var tmpStationsArray: [Station] = []
@@ -41,6 +43,12 @@ class StationsTableViewController: UITableViewController {
         //tmpStationsArray.append(st1)
         
         tmpStationsArray += [st1,st2,st3,st4]
+        
+        tmpStationsArray = []
+        
+        let b = BabsDAO()
+        
+        tmpStationsArray = b.stationsForTableView()
         
         //***************** TEMPORARY DATA END *********************
         

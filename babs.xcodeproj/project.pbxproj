@@ -18,7 +18,6 @@
 		A97C02411B59B56700909417 /* StationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97C02401B59B56700909417 /* StationsTableViewController.swift */; };
 		A9888FC11B5BA4BB00196BCC /* BabsDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9888FC01B5BA4BB00196BCC /* BabsDAO.swift */; };
 		A9888FC31B5BADCF00196BCC /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9888FC21B5BADCF00196BCC /* Station.swift */; };
-		A9888FC51B5EEBDB00196BCC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9888FC41B5EEBDB00196BCC /* SwiftyJSON.swift */; };
 		A9888FC91B65033C00196BCC /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9888FC81B65033C00196BCC /* PinAnnotation.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +47,6 @@
 		A97C02401B59B56700909417 /* StationsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationsTableViewController.swift; sourceTree = "<group>"; };
 		A9888FC01B5BA4BB00196BCC /* BabsDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BabsDAO.swift; sourceTree = "<group>"; };
 		A9888FC21B5BADCF00196BCC /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
-		A9888FC41B5EEBDB00196BCC /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		A9888FC81B65033C00196BCC /* PinAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +91,6 @@
 		A97C02151B57F6D300909417 /* babs */ = {
 			isa = PBXGroup;
 			children = (
-				A9888FC41B5EEBDB00196BCC /* SwiftyJSON.swift */,
 				A9888FC01B5BA4BB00196BCC /* BabsDAO.swift */,
 				A97C023E1B59B09A00909417 /* MapViewController.swift */,
 				A97C02401B59B56700909417 /* StationsTableViewController.swift */,
@@ -245,7 +242,6 @@
 				A97C023F1B59B09A00909417 /* MapViewController.swift in Sources */,
 				A9888FC11B5BA4BB00196BCC /* BabsDAO.swift in Sources */,
 				A9888FC31B5BADCF00196BCC /* Station.swift in Sources */,
-				A9888FC51B5EEBDB00196BCC /* SwiftyJSON.swift in Sources */,
 				A97C02191B57F6D300909417 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
