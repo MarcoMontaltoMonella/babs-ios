@@ -23,7 +23,7 @@ class StationsTableViewController: UITableViewController {
     //weak var stations: StationTableViewDataSource?
     
     // TEMPORARY DATA ARRAY
-    var tmpStationsArray: [Station] = []
+    var stations: [Station] = []
 
     // MARK: - View Controller Lifecycle
     
@@ -42,16 +42,15 @@ class StationsTableViewController: UITableViewController {
         //equivalent
         //tmpStationsArray.append(st1)
         
-        tmpStationsArray += [st1,st2,st3,st4]
-        
-        tmpStationsArray = []
-        
-        let b = BabsDAO()
-        
-        tmpStationsArray = b.stationsForTableView()
+        //tmpStationsArray += [st1,st2,st3,st4]
         
         //***************** TEMPORARY DATA END *********************
         
+        stations = []
+        
+        let b = BabsDAO()
+        
+        stations = b.stationsForTableView()
         
         
         
@@ -85,7 +84,7 @@ class StationsTableViewController: UITableViewController {
         // Return the number of rows in the section.
         
         //return stations[section].count
-        return tmpStationsArray.count
+        return stations.count
     }
     
     
@@ -99,8 +98,8 @@ class StationsTableViewController: UITableViewController {
 
         // Configure the cell...
         
-        cell.textLabel!.text = tmpStationsArray[indexPath.row].description
-        cell.detailTextLabel!.text = String("\(tmpStationsArray[indexPath.row].id!)")
+        cell.textLabel!.text = stations[indexPath.row].description
+        cell.detailTextLabel!.text = String("\(stations[indexPath.row].id!)")
         /*
         let stations: [Station] = stations?.stationsForTableView(self)
         let station = stations[indexPath.section]
@@ -124,7 +123,7 @@ class StationsTableViewController: UITableViewController {
             if segue.identifier == Storyboard.GeneralCell {
                 if let selectedID = tableView.indexPathForSelectedRow()?.row { //FIXME doesn't get in!
                     //get ID coordinates
-                    let selectedStation = tmpStationsArray[selectedID]
+                    let selectedStation = stations[selectedID]
                     mapvc.title = selectedStation.name!
                     mapvc.pinPoint(longitude: selectedStation.longitude!, latitude: selectedStation.latitude!, title: selectedStation.name!, subtitle: "\(selectedStation.dockcount!) 🚴")
                 }

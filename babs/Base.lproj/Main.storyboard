@@ -72,6 +72,9 @@
                             <constraint firstItem="gDx-7Y-NDD" firstAttribute="top" secondItem="l6Y-mS-63d" secondAttribute="top" id="Yr1-lq-Jbv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="gDx-7Y-NDD" id="hds-QH-5TD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kmc-e5-mW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

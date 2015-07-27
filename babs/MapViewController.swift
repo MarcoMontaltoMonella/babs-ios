@@ -11,7 +11,7 @@ import MapKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
-    var mapView: MKMapView!
+    @IBOutlet weak var mapView: MKMapView!
     var pinLocation: CLLocationCoordinate2D!
     var pinTitle: String!
     var pinSubtitle: String!
@@ -25,6 +25,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
 //        println("MapViewController loaded!")
     }
+    
     
     required init(coder aDecorer: NSCoder){
         super.init(coder: aDecorer)
