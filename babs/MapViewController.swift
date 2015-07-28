@@ -26,11 +26,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 //        println("MapViewController loaded!")
     }
     
-    
-    required init(coder aDecorer: NSCoder){
-        super.init(coder: aDecorer)
-        mapView = MKMapView()
-    }
+    /* Without storyboard init */
+//    required init(coder aDecorer: NSCoder){
+//        super.init(coder: aDecorer)
+//        mapView = MKMapView()
+//    }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
